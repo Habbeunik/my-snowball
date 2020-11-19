@@ -1,6 +1,6 @@
-export const getHourRotationDegree = hour => `${(Number(hour) / 12) * 360}°`;
+export const getHourRotationDegree = hour => (Number(hour) / 12) * 360;
 
-export const getMinuteRotationDegree = min => `${(Number(min) / 60) * 360}°`;
+export const getMinuteRotationDegree = min => (Number(min) / 60) * 360;
 
 export const formatTimeInput = (val, max) => {
 	if (val > max) {

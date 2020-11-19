@@ -6,21 +6,21 @@ import {
 
 describe('Get Hour Rotation Degree', () => {
 	it('Returns correct degree', () => {
-		expect(getHourRotationDegree(3)).toBe('90°');
+		expect(getHourRotationDegree(3)).toBe(90);
 	});
 
 	it('Returns correct degree for string inputs', () => {
-		expect(getHourRotationDegree('4')).toBe('120°');
+		expect(getHourRotationDegree('4')).toBe(120);
 	});
 });
 
 describe('Get Minutes Rotation Degree', () => {
 	it('Returns correct degree', () => {
-		expect(getMinuteRotationDegree(15)).toBe('90°');
+		expect(getMinuteRotationDegree(15)).toBe(90);
 	});
 
 	it('Returns correct degree for string inputs', () => {
-		expect(getMinuteRotationDegree('30')).toBe('180°');
+		expect(getMinuteRotationDegree('30')).toBe(180);
 	});
 });
 

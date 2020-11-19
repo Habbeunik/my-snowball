@@ -9,11 +9,12 @@ import {
 import './main.scss';
 
 function App() {
-	const [hour, setHour] = useState('12');
+	const [hour, setHour] = useState('01');
 	const [min, setMin] = useState('00');
 
 	const hourDegree = useMemo(() => getHourRotationDegree(hour), [hour]);
 	const minutesDegree = useMemo(() => getMinuteRotationDegree(min), [min]);
+	const difference = hourDegree - minutesDegree;
 
 	const handleHourChange = useCallback(
 		val => {
@@ -51,11 +52,15 @@ function App() {
 			<div>
 				<div className='degreeDisplay'>
 					<span>Hour Degree - </span>
-					<span>{hourDegree}</span>
+					<span>{hourDegree}°</span>
 				</div>
 				<div className='degreeDisplay'>
 					<span>Minutes Degree - </span>
-					<span>{minutesDegree}</span>
+					<span>{minutesDegree}°</span>
+				</div>
+				<div className='degreeDisplay'>
+					<span>Difference Between Hour and Minute Degree - {} </span>
+					<span>{difference}°</span>
 				</div>
 			</div>
 		</div>

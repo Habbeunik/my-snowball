@@ -1,19 +1,12 @@
 import Input from 'components/Input';
 import React, { useCallback, useMemo, useState } from 'react';
+import {
+	getHourRotationDegree,
+	getMinuteRotationDegree,
+	formatTimeInput
+} from 'utils';
 
 import './main.scss';
-
-const getHourRotationDegree = hour => `${(Number(hour) / 12) * 360}°`;
-const getMinuteRotationDegree = min => `${(Number(min) / 60) * 360}°`;
-
-const formatTimeInput = (val, max) => {
-	if (val > max) {
-		val = max;
-	}
-	const format = Number(val) < 10 ? `0${Number(val)}` : val;
-
-	return format;
-};
 
 function App() {
 	const [hour, setHour] = useState('12');

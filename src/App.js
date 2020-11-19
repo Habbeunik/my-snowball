@@ -16,14 +16,14 @@ function App() {
 	const minutesDegree = useMemo(() => getMinuteRotationDegree(min), [min]);
 
 	const handleHourChange = useCallback(
-		e => {
-			setHour(formatTimeInput(e.target.value, 12));
+		val => {
+			setHour(formatTimeInput(val, 12));
 		},
 		[setHour]
 	);
 	const handleMinChange = useCallback(
-		e => {
-			setMin(formatTimeInput(e.target.value, 59));
+		val => {
+			setMin(formatTimeInput(val, 59));
 		},
 		[setMin]
 	);
